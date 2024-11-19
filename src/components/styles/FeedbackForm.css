@@ -1,0 +1,126 @@
+/* FeedbackForm.css */
+
+/* Container for the feedback form */
+.feedback-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title of the feedback form */
+.feedback-form-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Label for form fields */
+.feedback-form-container label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Input fields and textarea */
+.feedback-form-container input,
+.feedback-form-container textarea,
+.feedback-form-container select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+}
+
+.feedback-form-container input:focus,
+.feedback-form-container textarea:focus,
+.feedback-form-container select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Rating stars (custom design) */
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.rating label {
+  font-size: 1.5rem;
+  color: #ffbf00; /* Gold color */
+  cursor: pointer;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: #ffdf00; /* Yellow when selected */
+}
+
+/* Submit button */
+.feedback-form-container button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Success/Error message styling */
+.success-message,
+.error-message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .feedback-form-container {
+    padding: 20px;
+  }
+
+  .feedback-form-container h2 {
+    font-size: 2rem;
+  }
+
+  .feedback-form-container label {
+    font-size: 1rem;
+  }
+
+  .feedback-form-container button {
+    font-size: 1rem;
+  }
+}

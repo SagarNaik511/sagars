@@ -1,0 +1,128 @@
+/* General Reset - Normalize styles for a consistent layout across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+  background-color: #f4f4f4;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 60px; /* Adjust if header is fixed */
+}
+
+/* Apply a smooth transition for layout changes */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links styles (for the whole app) */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* Global Container (applies to main sections) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Global Heading Styles */
+h1, h2, h3, h4 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Buttons (if using in various parts of the website) */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input fields for forms */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsive Design for mobile-first */
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px; /* Adjust padding for smaller screens */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 40px; /* Adjust for very small screens */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

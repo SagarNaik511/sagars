@@ -1,0 +1,20 @@
+.header {
+  background-image: url('../../../public/images/asian-noodles-green-chives-red-chili-dark-slate-background-top-view-banner-website-cooking-concept-55676459.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 60px 10px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(241, 239, 239, 0.7);
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 300;
+}
