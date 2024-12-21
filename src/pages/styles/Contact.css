@@ -1,130 +1,94 @@
-/* Contact.css */
-
-/* General container for the contact page */
-.contact-container {
-  padding: 50px 20px;
-  background-color: #f8f8f8;
-  min-height: 100vh;
-}
-
-/* Header for the contact section */
-.contact-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contact-header h1 {
-  font-size: 2.5rem;
+.contact-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
   color: #333;
 }
 
-.contact-header p {
-  font-size: 1.2rem;
-  color: #555;
+.contact-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-/* Contact form styles */
-.contact-form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact-description {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.contact-form-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
   display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
   margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-.contact-form button {
-  background-color: #007bff;
+.submit-button {
+  background-color: #28a745;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 1.1rem;
+  border-radius: 4px;
   cursor: pointer;
-  width: 100%;
-  margin-top: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #0056b3;
+.submit-button:hover {
+  background-color: #218838;
 }
 
-/* Contact info section */
-.contact-info {
-  margin-top: 50px;
+.form-status {
   text-align: center;
-}
-
-.contact-info h3 {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.contact-info p {
-  font-size: 1.1rem;
-  color: #555;
-  margin: 5px 0;
-}
-
-.contact-info .social-links {
+  color: #28a745;
+  font-weight: bold;
   margin-top: 20px;
 }
 
-.contact-info .social-links a {
-  font-size: 1.5rem;
-  color: #007bff;
+.contact-details {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-details h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  margin: 20px 0;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
   margin: 0 10px;
+  color: #007bff;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.contact-info .social-links a:hover {
+.social-links a:hover {
   color: #0056b3;
-}
-
-/* Responsive styles for mobile and tablet screens */
-@media (max-width: 768px) {
-  .contact-form {
-    padding: 20px;
-    width: 90%;
-  }
-
-  .contact-info h3 {
-    font-size: 1.5rem;
-  }
-
-  .contact-info p {
-    font-size: 1rem;
-  }
-
-  .contact-info .social-links a {
-    font-size: 1.3rem;
-  }
 }

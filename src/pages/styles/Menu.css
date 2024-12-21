@@ -1,21 +1,89 @@
+/* General Styles for the Menu Page */
 .menu {
-  max-width: 1200px;
-  margin: 50px auto;
+  font-family: 'Arial', sans-serif;
   padding: 20px;
-  text-align: center;
-}
-
-.menu-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-.menu-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.menu-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
+/* Styles for Each Menu Section */
+.menu-section {
+  margin-bottom: 40px;
+}
+
+.menu-section-title {
+  font-size: 1.8em;
+  color: #34495e;
+  border-bottom: 2px solid #34495e;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Menu Card List */
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Menu Card Styles */
+.menu-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card-title {
+  font-size: 1.4em;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.menu-card-description {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin: 10px;
+}
+
+.menu-card-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 90%;
+  }
+}
