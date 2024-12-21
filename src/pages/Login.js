@@ -28,38 +28,43 @@ function Login() {
 
   return (
     <div className="login-page">
+      <div className="bird"></div> {/* Flying bird animation */}
       <h1>Login</h1>
       {isLoggedIn ? (
-        <div>
+        <div className="welcome-message">
           <h2>Welcome Back!</h2>
           <p>You have successfully logged in.</p>
-          <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+          <button onClick={() => setIsLoggedIn(false)} className="logout-button">Logout</button>
         </div>
       ) : (
         <form className="login-form" onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-          <button type="submit">Log In</button>
+          <button type="submit" className="submit-button">Log In</button>
         </form>
       )}
     </div>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles/CustomizeOrder.css';
 
 function CustomizeOrder() {
-  // Sample item data to customize
   const [orderDetails, setOrderDetails] = useState({
     itemName: "Margherita Pizza",
     basePrice: 10.99,
@@ -15,12 +14,10 @@ function CustomizeOrder() {
   const availableToppings = ["Basil", "Olives", "Tomato", "Mushrooms"];
   const availableAddOns = ["Extra Cheese", "Garlic Bread", "Soft Drink"];
 
-  // Handle changes to size selection
   const handleSizeChange = (e) => {
     setOrderDetails({ ...orderDetails, size: e.target.value });
   };
 
-  // Handle adding/removing toppings
   const handleToppingChange = (topping) => {
     setOrderDetails((prevState) => {
       const newToppings = prevState.toppings.includes(topping)
@@ -30,7 +27,6 @@ function CustomizeOrder() {
     });
   };
 
-  // Handle adding/removing add-ons
   const handleAddOnChange = (addOn) => {
     setOrderDetails((prevState) => {
       const newAddOns = prevState.addOns.includes(addOn)
@@ -40,7 +36,6 @@ function CustomizeOrder() {
     });
   };
 
-  // Calculate total price based on customizations
   const calculateTotalPrice = () => {
     let total = orderDetails.basePrice;
     if (orderDetails.size === "Large") total += 2.00;
@@ -50,7 +45,6 @@ function CustomizeOrder() {
   };
 
   const handleAddToCart = () => {
-    // Add logic to add the customized order to the cart
     console.log("Adding to cart:", orderDetails);
   };
 
@@ -61,7 +55,6 @@ function CustomizeOrder() {
         <h2>{orderDetails.itemName}</h2>
         <p>Base Price: ${orderDetails.basePrice.toFixed(2)}</p>
 
-        {/* Size Selection */}
         <div className="customization-option">
           <h3>Choose Size</h3>
           <select value={orderDetails.size} onChange={handleSizeChange}>
@@ -70,7 +63,6 @@ function CustomizeOrder() {
           </select>
         </div>
 
-        {/* Toppings Selection */}
         <div className="customization-option">
           <h3>Choose Toppings</h3>
           {availableToppings.map((topping, index) => (
@@ -85,7 +77,6 @@ function CustomizeOrder() {
           ))}
         </div>
 
-        {/* Add-ons Selection */}
         <div className="customization-option">
           <h3>Choose Add-Ons</h3>
           {availableAddOns.map((addOn, index) => (
@@ -100,7 +91,6 @@ function CustomizeOrder() {
           ))}
         </div>
 
-        {/* Quantity Selector */}
         <div className="customization-option">
           <h3>Quantity</h3>
           <input
@@ -111,12 +101,10 @@ function CustomizeOrder() {
           />
         </div>
 
-        {/* Total Price */}
         <div className="order-summary">
           <h3>Total Price: ${calculateTotalPrice().toFixed(2)}</h3>
         </div>
 
-        {/* Add to Cart Button */}
         <button className="add-to-cart-button" onClick={handleAddToCart}>
           Add to Cart
         </button>

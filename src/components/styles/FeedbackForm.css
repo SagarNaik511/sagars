@@ -1,126 +1,88 @@
-/* FeedbackForm.css */
-
-/* Container for the feedback form */
-.feedback-form-container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+/* Container for each menu card */
+.menu-card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevents content overflow */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  padding: 16px;
+  margin: 16px; /* Space around each card */
 }
 
-/* Title of the feedback form */
-.feedback-form-container h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+/* Hover effect */
+.menu-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-/* Label for form fields */
-.feedback-form-container label {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 8px;
+/* Image styles */
+.menu-image {
+  width: 100%; /* Full width of the card */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio and crop excess */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 16px; /* Spacing below the image */
 }
 
-/* Input fields and textarea */
-.feedback-form-container input,
-.feedback-form-container textarea,
-.feedback-form-container select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: #f8f8f8;
-  margin-bottom: 20px;
+/* Title (menu item name) */
+.menu-card h2 {
+  font-size: 1.5rem; /* Larger font size for titles */
+  color: #333; /* Dark gray text */
+  margin-bottom: 8px; /* Space below the title */
 }
 
-.feedback-form-container input:focus,
-.feedback-form-container textarea:focus,
-.feedback-form-container select:focus {
-  border-color: #007bff;
-  outline: none;
-  background-color: #fff;
+/* Description of the menu item */
+.menu-card p {
+  font-size: 1rem; /* Standard font size */
+  color: #666; /* Medium gray text */
+  margin: 8px 0; /* Space around paragraphs */
+  line-height: 1.6; /* Improve readability */
 }
 
-/* Rating stars (custom design) */
-.rating {
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-  margin-bottom: 20px;
+/* Price styling */
+.menu-card .price {
+  font-weight: bold; /* Bold text for emphasis */
+  color: #ff5722; /* Accent color for price */
+  font-size: 1.2rem; /* Slightly larger font size */
+  margin-top: 12px; /* Space above the price */
 }
 
-.rating label {
-  font-size: 1.5rem;
-  color: #ffbf00; /* Gold color */
-  cursor: pointer;
+/* Optional action button (e.g., Order Now) */
+.menu-card .menu-button {
+  display: inline-block;
+  background-color: #007b5e; /* Green button */
+  color: #ffffff; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 6px; /* Rounded button corners */
+  font-size: 1rem; /* Adjust font size */
+  margin-top: 16px; /* Space above the button */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
-.rating input[type="radio"] {
-  display: none;
-}
-
-.rating input[type="radio"]:checked ~ label {
-  color: #ffdf00; /* Yellow when selected */
-}
-
-/* Submit button */
-.feedback-form-container button {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background-color: #007bff;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.feedback-form-container button:hover {
-  background-color: #0056b3;
-}
-
-/* Success/Error message styling */
-.success-message,
-.error-message {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.success-message {
-  color: green;
-}
-
-.error-message {
-  color: red;
+/* Hover effect for button */
+.menu-card .menu-button:hover {
+  background-color: #005a45; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom */
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  .feedback-form-container {
-    padding: 20px;
+@media screen and (max-width: 768px) {
+  .menu-card {
+    padding: 12px; /* Reduce padding on smaller screens */
   }
 
-  .feedback-form-container h2 {
-    font-size: 2rem;
+  .menu-image {
+    height: 150px; /* Adjust image height for smaller screens */
   }
 
-  .feedback-form-container label {
-    font-size: 1rem;
+  .menu-card h2 {
+    font-size: 1.3rem; /* Slightly smaller title */
   }
 
-  .feedback-form-container button {
-    font-size: 1rem;
+  .menu-card p {
+    font-size: 0.9rem; /* Slightly smaller text */
   }
 }
